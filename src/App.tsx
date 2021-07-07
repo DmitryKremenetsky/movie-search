@@ -1,17 +1,13 @@
 import React from 'react';
+import { SearchBar } from './components';
 import './App.css';
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="search-bar">
-          <form>
-            <input type="text" placeholder="Искать здесь..."></input>
-            <button type="submit"></button>
-            <div className="delete">X</div>
-          </form>
-        </div>
+        <SearchBar />
       </header>
     </div>
   );
