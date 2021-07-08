@@ -8,8 +8,8 @@ function SearchBar() {
     <div className="search-bar">
       <input type="text" placeholder="Search..."></input>
       <button type="submit"></button>
-      <FontAwesomeIcon icon={faBackspace} />
-      <FontAwesomeIcon icon={faSearch} />
+      <FontAwesomeIcon className="backspace-icon" icon={faBackspace} />
+      <FontAwesomeIcon className="search-icon" icon={faSearch} />
     </div>
   );
 }
