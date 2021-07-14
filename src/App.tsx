@@ -1,6 +1,6 @@
 import { SearchBar } from "./components";
 import { useState, useEffect } from "react";
-import MovieList from "./components/MovieList/MovieList";
+import { MovieList } from "./components";
 import "./App.css";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
       <header className="App-header">
         <SearchBar />
       </header>
-      <MovieList movies={movies} />
+        <MovieList movies={movies} />
     </div>
   );
 }
