@@ -38,4 +38,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ### `GitHub Pages`
 
-[review](https://dmitrykremenetsky.github.io/movie-search/) for review
+[review](https://DmitryKremenetsky.github.io/movie-search) for review
