@@ -4,8 +4,8 @@ import "./styles.scss";
 const MovieList = ({ searchQuery, movies, setMovies }) => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const getMovieRequest = async (searchQuery, pageNumber = 1) => {
-    const url = `http://www.omdbapi.com/?&apikey=35def29d&s=${searchQuery}&page=${pageNumber}`;
+  const getMovieRequest = async (searchQuery) => {
+    const url = `http://www.omdbapi.com/?apikey=35def29d&s=${searchQuery}`;
     const response = await fetch(url);
     return await response.json();
   };
@@ -20,22 +20,25 @@ const MovieList = ({ searchQuery, movies, setMovies }) => {
         setMovies(response.Search || []);
         setIsLoading(false);
       })
-
       .catch(() => setIsLoading(false));
   }, [searchQuery]);
 
   if (isLoading) return <div className="loading">Loading...</div>;
 
   return (
-
     <div className="movies">
       {movies.map((movie) => (
         <div className="movie" key={movie.imdbID}>
           <img src={movie.Poster} alt="movie" />
         </div>
       ))}
-    </div>
 
+      {movies.map((movie) => (
+        <div className="movie" key={movie.imdbID}>
+          <img src={movie.Poster} alt="movie" />
+        </div>
+      ))}
+    </div>
   );
 };
 

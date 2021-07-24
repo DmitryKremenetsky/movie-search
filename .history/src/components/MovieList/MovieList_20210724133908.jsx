@@ -4,7 +4,7 @@ import "./styles.scss";
 const MovieList = ({ searchQuery, movies, setMovies }) => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const getMovieRequest = async (searchQuery, pageNumber = 1) => {
+  const getMovieRequest = async (searchQuery, pageNumber = 2) => {
     const url = `http://www.omdbapi.com/?&apikey=35def29d&s=${searchQuery}&page=${pageNumber}`;
     const response = await fetch(url);
     return await response.json();
