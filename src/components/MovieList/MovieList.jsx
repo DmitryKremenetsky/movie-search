@@ -5,7 +5,7 @@ const MovieList = ({ searchQuery, movies, setMovies }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const getMovieRequest = async (searchQuery) => {
-    const url = `http://www.omdbapi.com/?apikey=35def29d&s=${searchQuery}`;
+    const url = `https://www.omdbapi.com/?apikey=35def29d&s=${searchQuery}`;
     const response = await fetch(url);
     return await response.json();
   };
