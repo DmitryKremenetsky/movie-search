@@ -3,5 +3,11 @@
 }
 
 body {
-  background: linear-gradient(to right, #a3795f 50%, #012754);
+  background: rgb(0,0,0,0.8);
+}
+
+.btn {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px;
 }
