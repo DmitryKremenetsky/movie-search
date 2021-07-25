@@ -4,11 +4,20 @@ import "./styles.scss";
 const MovieList = ({ searchQuery, movies, setMovies }) => {
   const [isLoading, setIsLoading] = useState(false);
 
-  const getMovieRequest = async (searchQuery) => {
-    const url = `https://www.omdbapi.com/?apikey=35def29d&s=${searchQuery}`;
+  const getMovieRequest = async (searchQuery, pageNumber = 1) => {
+    const url = `http://www.omdbapi.com/?&apikey=35def29d&s=${searchQuery}&page=${pageNumber}`;
     const response = await fetch(url);
     return await response.json();
   };
+
+  const newPage = (direction) => {
+    if(direction === "next") {
+      setCurrentPage(prevCurrent => prevCurrent + 1);
+      setIsLoading(true);
+    } else if (direction === "previous" && currentPage !== 1) {
+      setCurrentPage(prevCurrent => prevCurrent - 1);
+    }
+  }
 
   useEffect(() => {
     if (searchQuery.length < 3) return;
@@ -20,8 +29,9 @@ const MovieList = ({ searchQuery, movies, setMovies }) => {
         setMovies(response.Search || []);
         setIsLoading(false);
       })
+
       .catch(() => setIsLoading(false));
-  }, [searchQuery]);
+  }, [searchQuery, setMovies]);
 
   if (isLoading) return <div className="loading">Loading...</div>;
 

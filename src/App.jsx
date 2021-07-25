@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MovieList, SearchBar } from "./components";
+import { MovieList, MoviePage, SearchBar } from "./components";
 import "./App.css";
 
 function App() {
@@ -18,6 +18,7 @@ function App() {
         setMovies={setMovies}
         searchQuery={searchQuery}
       />
+      <MoviePage />
     </main>
   );
 }
