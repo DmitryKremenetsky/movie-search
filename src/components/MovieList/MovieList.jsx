@@ -14,7 +14,6 @@ const MovieList = ({ searchQuery, movies, setMovies }) => {
     if(direction === "next") {
       setCurrentPage(pageNumber => pageNumber + 1);
       setIsLoading(true);
-    // eslint-disable-next-line no-unused-vars
     } else if (direction === "previous" && pageNumber !== 1) {
       setCurrentPage(pageNumber => pageNumber - 1);
     }
