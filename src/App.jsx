@@ -5,6 +5,7 @@ import "./App.css";
 function App() {
   const [movies, setMovies] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [pageNumber, setPageNumber] = useState(1);
 
   return (
     <main>
@@ -17,8 +18,12 @@ function App() {
         movies={movies}
         setMovies={setMovies}
         searchQuery={searchQuery}
+        pageNumber={pageNumber}
       />
-      <MoviePage />
+      <MoviePage
+        pageNumber={pageNumber}
+        setPageNumber={setPageNumber}
+      />
     </main>
   );
 }
