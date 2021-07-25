@@ -10,14 +10,15 @@ const MovieList = ({ searchQuery, movies, setMovies }) => {
     return await response.json();
   };
 
-  const newPage = (direction) => {
+  const pageNumber = (direction, setCurrentPage) => {
     if(direction === "next") {
-      setCurrentPage(prevCurrent => prevCurrent + 1);
+      setCurrentPage(pageNumber => pageNumber + 1);
       setIsLoading(true);
-    } else if (direction === "previous" && currentPage !== 1) {
-      setCurrentPage(prevCurrent => prevCurrent - 1);
+    // eslint-disable-next-line no-unused-vars
+    } else if (direction === "previous" && pageNumber !== 1) {
+      setCurrentPage(pageNumber => pageNumber - 1);
     }
-  }
+  };
 
   useEffect(() => {
     if (searchQuery.length < 3) return;
