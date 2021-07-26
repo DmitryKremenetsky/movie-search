@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBackspace } from "@fortawesome/free-solid-svg-icons";
-import { DebounceInput } from 'react-debounce-input';
+import { DebounceInput } from "react-debounce-input";
 import "./styles.scss";
 
-function SearchBar({ searchQuery, setSearchQuery, setMovies }) {
+function SearchBar({ searchQuery, setSearchQuery, setMovies}) {
   const onChange = (event) => setSearchQuery(event.target.value);
   const onClear = () => {
     setSearchQuery('')
