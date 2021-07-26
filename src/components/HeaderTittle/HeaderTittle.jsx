@@ -1,13 +1,11 @@
 import "./styles.scss";
 
-const HeaderTittle = () => {
+const HeaderTitle = () => {
   return (
     <header className="header">
-      <div className="h1">
-        <h1 className="h1Text">MovieSearchApp</h1>
-      </div>
+        <h1 className="title">MovieSearchApp</h1>
     </header>
   );
 };
 
-export default HeaderTittle;
+export default HeaderTitle;
