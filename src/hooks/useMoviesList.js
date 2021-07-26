@@ -32,5 +32,6 @@ export default function useMoviesList(searchQuery, page) {
     movies,
     totalPages,
     isFetching,
+    setMovies,
   }
 }
