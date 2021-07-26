@@ -1,7 +1,14 @@
 .movie-pages {
-  background-color: red;
+  display: flex;
+  justify-content: center;
 }
 
-.previousPage {
-  color: blueviolet;
+.pages-icon {
+  margin: 30px;
+  color: aqua;
+}
+
+.pages-icon:hover {
+  cursor: pointer;
+  color: #57797d;
 }

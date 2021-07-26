@@ -14,15 +14,16 @@ function App() {
         setSearchQuery={setSearchQuery}
         setMovies={setMovies}
       />
+      <MoviePage
+      pageNumber={pageNumber}
+      setPageNumber={setPageNumber}
+      />
+
       <MovieList
         movies={movies}
         setMovies={setMovies}
         searchQuery={searchQuery}
         pageNumber={pageNumber}
-      />
-      <MoviePage
-        pageNumber={pageNumber}
-        setPageNumber={setPageNumber}
       />
     </main>
   );
