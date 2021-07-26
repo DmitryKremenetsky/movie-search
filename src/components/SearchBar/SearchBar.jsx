@@ -3,12 +3,12 @@ import { faBackspace } from "@fortawesome/free-solid-svg-icons";
 import { DebounceInput } from "react-debounce-input";
 import "./styles.scss";
 
-function SearchBar({ searchQuery, setSearchQuery, setMovies }) {
+function SearchBar({ searchQuery, setSearchQuery, setMovies}) {
   const onChange = (event) => setSearchQuery(event.target.value);
   const onClear = () => {
-    setSearchQuery('');
-    setMovies([]);
-  };
+    setSearchQuery('')
+    setMovies([])
+  }
 
   return (
     <div className="search-bar">
