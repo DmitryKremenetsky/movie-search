@@ -1,29 +1,28 @@
 import { useState } from "react";
 import { MovieList, MoviePage, SearchBar } from "./components";
+import { useMoviesList } from './hooks'
 import "./App.css";
 
 function App() {
-  const [movies, setMovies] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [pageNumber, setPageNumber] = useState(1);
+  const [page, setPage] = useState(1);
+  const { movies, totalPages, isFetching } = useMoviesList(searchQuery, page);
 
   return (
     <main>
       <SearchBar
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
-        setMovies={setMovies}
       />
       <MoviePage
-      pageNumber={pageNumber}
-      setPageNumber={setPageNumber}
+        totalPages={totalPages}
+        page={page}
+        setPage={setPage}
       />
-
       <MovieList
         movies={movies}
-        setMovies={setMovies}
         searchQuery={searchQuery}
-        pageNumber={pageNumber}
+        isFetching={isFetching}
       />
     </main>
   );
