@@ -4,6 +4,17 @@
   margin: 30px;
 }
 
-.buttonPage {
+.ButtonPage {
+  width: 50px;
+  height: 25px;
+  border-radius: 10px;
+  background-color: silver;
+}
+
+.ButtonPage:hover {
+  cursor: pointer;
+}
+
+.iconButtonPage {
   color: chocolate;
 }

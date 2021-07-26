@@ -13,21 +13,22 @@ const MoviePage = ({ totalPages, page, setPage }) => {
     <div className="movie-pages">
       {showPrevButton &&
         <button
-          className="previousPage"
+          className="ButtonPage"
           onClick={onPrevClick}
         >
           <FontAwesomeIcon
-            className="buttonPage"
+            className="iconButtonPage"
             icon={faArrowLeft}
           />
         </button>
       }
       {showNextButton &&
         <button
+          className="ButtonPage"
           onClick={onNextClick}
         >
           <FontAwesomeIcon
-            className="buttonPage"
+            className="iconButtonPage"
             icon={faArrowRight}
           />
         </button>
