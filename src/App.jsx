@@ -2,6 +2,7 @@ import { useState } from "react";
 import { MovieList, MoviePage, SearchBar } from "./components";
 import { useMoviesList } from './hooks'
 import "./App.css";
+import HeaderTittle from "./components/HeaderTittle/HeaderTittle";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -10,6 +11,7 @@ function App() {
 
   return (
     <main>
+      <HeaderTittle />
       <SearchBar
         searchQuery={searchQuery}
         setSearchQuery={setSearchQuery}
