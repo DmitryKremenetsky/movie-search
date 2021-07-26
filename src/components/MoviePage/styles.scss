@@ -1,14 +1,20 @@
 .movie-pages {
   display: flex;
-  justify-content: center;
-}
-
-.pages-icon {
+  justify-content: space-evenly;
   margin: 30px;
-  color: aqua;
 }
 
-.pages-icon:hover {
+.ButtonPage {
+  width: 50px;
+  height: 25px;
+  border-radius: 10px;
+  background-color: silver;
+}
+
+.ButtonPage:hover {
   cursor: pointer;
-  color: #57797d;
+}
+
+.iconButtonPage {
+  color: chocolate;
 }

@@ -1,30 +1,13 @@
-import { useEffect, useState } from "react";
 import "./styles.scss";
 
-const MovieList = ({ searchQuery, movies, setMovies, pageNumber }) => {
-  const [isLoading, setIsLoading] = useState(false);
+const MovieList = ({ movies, searchQuery, isFetching }) => {
+  if (isFetching) {
+    return <div className="title">Loading...</div>;
+  }
 
-  const getMovieRequest = async (searchQuery) => {
-    const url = `http://www.omdbapi.com/?&apikey=35def29d&s=${searchQuery}&page=${pageNumber}`;
-    const response = await fetch(url);
-    return await response.json();
-  };
-
-  useEffect(() => {
-    if (searchQuery.length < 3) return;
-
-    setIsLoading(true);
-
-    getMovieRequest(searchQuery)
-      .then((response) => {
-        setMovies(response.Search || []);
-        setIsLoading(false);
-      })
-
-      .catch(() => setIsLoading(false));
-  }, [searchQuery, pageNumber]);
-
-  if (isLoading) return <div className="loading">Loading...</div>;
+  if (searchQuery.length > 3 && movies.length === 0) {
+    return <div className="title">No results found:(</div>;
+  }
 
   return (
     <div className="movies">
