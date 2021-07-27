@@ -1,8 +1,6 @@
 .header {
-  height: 72px;
-  margin-bottom: 30px;
-  background-color: rgb(61, 66, 66);
-  border-bottom: 5px solid #1c6ea4;
+  z-index: 1;
+  border-bottom: 5px solid #6f767a;
   border-radius: 0px 0px 22px 22px;
 }
 
@@ -10,5 +8,5 @@
   display: flex;
   justify-content: center;
   margin: 10px;
-  color: #1c6ea4;
+  color: #e3e9ec;
 }
