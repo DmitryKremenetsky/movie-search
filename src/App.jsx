@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MovieList, MoviePage, SearchBar, HeaderTitle } from "./components";
+import { MovieList, MoviePage, SearchBar, HeaderTitle, Footer } from "./components";
 import { useMoviesList } from './hooks'
 import "./App.css";
 
@@ -26,6 +26,7 @@ function App() {
         searchQuery={searchQuery}
         isFetching={isFetching}
       />
+      <Footer />
     </main>
   );
 }
