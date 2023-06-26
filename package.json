@@ -2,8 +2,8 @@
   "name": "movie-search",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://DmitryKremenetsky.github.io/movie-search",
   "dependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
